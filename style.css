@@ -40,9 +40,9 @@ body {
   background-size: cover;
 }
 
-.right{
-    height: 100vh;
-    overflow: hidden;
+.right {
+  height: 100vh;
+  overflow: hidden;
 }
 
 .left > img {
@@ -205,18 +205,87 @@ h1 > span {
   margin-bottom: 10px;
 }
 
-.quote-sec > [alt="img"]{
+.quote-sec > [alt="img"] {
+  height: 300px;
+  width: 500px;
+}
+
+.quote-sec {
+  position: relative;
+}
+
+[alt="down"] {
+  position: absolute;
+  right: -120px;
+  height: 280px;
+  top: 100px;
+}
+
+@media screen and (max-width: 1557px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .center {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .bottom {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .right {
+    height: auto;
+  }
+  .list {
+    margin-block: 4rem;
+  }
+  .social {
+    gap: 2rem;
+    flex-direction: row;
+    top: -90px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  nav {
+    display: none;
+  }
+  [alt="down"] {
+    display: none;
+  }
+  .quote-sec > [alt="img"] {
     height: 300px;
-    width: 500px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .quote-sec > p {
+    max-width: 100%;
+  }
+  .social {
+    gap: 2rem;
+    flex-direction: row;
+    top: -70px;
+  }
 }
 
-.quote-sec{
-    position: relative;
-}
+@media screen and (max-width: 480px) {
+  .center > h1 {
+    font-size: 3rem;
+  }
+  
+  h1 > span {
+    text-align: left;
+    margin-left: 10%;
+  }
 
-[alt="down"]{
-    position: absolute;
-    right: -120px;
-    height: 280px;
-    top: 100px;
+  .context > p {
+    font-size: 1.5rem;
+  }
+  
+  .context > .btn {
+    font-size: 1rem;
+    width: 100%;
+  }
 }

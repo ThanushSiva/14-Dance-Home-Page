@@ -6,6 +6,7 @@
 
 -   Worked with a lot of position properties.
 -   Took 2 hours to complete project.
+-   Responsive in all devices.
 
 ---
 
